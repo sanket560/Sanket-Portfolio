@@ -1,0 +1,585 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap');
+
+:root{
+    --yellow:#f9ca24;
+}
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none; border:none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+*::selection{
+    background:var(--yellow);
+    color:#333;
+}
+
+html{
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+html::-webkit-scrollbar{
+    width:1.4rem;
+}
+
+html::-webkit-scrollbar-track{
+    background:#222;
+}
+
+html::-webkit-scrollbar-thumb{
+    background:var(--yellow);
+}
+
+body{
+    background:#111;
+    overflow-x: hidden;
+    padding-left: 35rem;
+}
+
+section{
+    min-height: 100vh;
+    padding:1rem;
+}
+
+
+.heading{
+    text-align: center;
+    margin:0 6rem;
+    font-size: 4rem;
+    padding:1rem;
+    border-bottom: .1rem solid #fff4;
+    color:#fff;
+}
+
+.heading span{
+    color:var(--yellow);
+}
+
+header{
+    position: fixed;
+    top:0; left:0;
+    z-index: 1000;
+    height:100%;
+    width:35rem;
+    background:#1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    text-align: center;
+}
+
+header .user img{
+    height:17rem;
+    width:17rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border:.7rem solid var(--yellow);
+}
+
+header .user .name{
+    font-size: 3.5rem;
+    color:#fff;
+}
+
+header .user .post{
+    font-size: 13px;
+    color:#eee;
+}
+
+header .navbar{
+    width:100%;
+}
+
+header .navbar ul{
+    list-style: none;
+    padding:1rem 3rem;
+}
+.subheading {
+    font-family: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 20px;
+    color: var(--yellow);
+}
+  
+header .navbar ul li a{
+    display: block;
+    padding:1rem;
+    margin:1.5rem 0;
+    background:#333;
+    color:#fff;
+    font-size: 2rem;
+    border-radius: 5rem;
+}
+
+header .navbar ul li a:hover{
+    background:var(--yellow);
+}
+
+
+#menu{
+    position: fixed;
+    top:2rem; right:2rem;
+    background:#333;
+    color:#fff;
+    cursor: pointer;
+    font-size: 2.5rem;
+    padding:1rem 1.5rem;
+    z-index: 1000;
+    display: none;
+}
+
+.home{
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    padding:0 15rem;
+}
+
+.home h1{
+    font-size: 6rem;
+    color:#fff;
+}
+.text-primary{
+    font-size: 6rem;
+    color:#fff;
+
+}
+.home h3{
+    font-size:5rem;
+    color:#fff;
+}
+
+.home h3 span{
+    color:var(--yellow);
+}
+
+.home p{
+    font-size:2rem;
+    color:#eee;
+    padding: 1rem 0;
+}
+
+.home .media {
+    display: flex;
+    justify-content:left;
+    align-items: left;
+}
+
+.home .media a{
+    width: 50px;
+    height: 50px;
+    background-color: #f5f6fa;
+    border-radius: 50px;
+    text-align: center;
+    line-height: 60px;
+    margin: 10px;
+}
+
+.home .media a i{
+    font-size: 25px ;
+    transition: all 0.3s linear;
+}
+.home .media a:hover i{
+transform: scale(1.3);
+}
+
+.fa-facebook{
+    color: #1877f2;
+}
+.fa-linkedin-in{
+    color: #0a66c2;
+}
+.fa-twitter{
+    color: #1da1f2;
+}
+.fa-github{
+    color: #222222;
+}
+.fa-instagram{
+    color: #f02323;
+}
+@media (max-width:767.98px) {
+    .home h3{
+        font-size:3rem;
+    }
+}
+.home button{
+    width: 130px;
+    height: 40px;
+    border-radius: 20px;
+    background-color:rgb(255, 255, 255);
+}
+.home button span{
+    color: rgb(0, 0, 0);
+}
+.timeline {
+    position: relative;
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 15px 0;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background: var(--yellow);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1px;
+}
+
+.project .container {
+    padding: 15px 30px;
+    position: relative;
+    background: inherit;
+    width: 50%;
+}
+
+.project .container.left {
+    left: 0;
+}
+
+.project .container.right {
+    left: 50%;
+}
+
+.project .container::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 48px;
+    right: -8px;
+    background: var(--yellow);
+    border-radius: 16px;
+    z-index: 1;
+}
+
+.project .container.right::after {
+    left: -8px;
+}
+
+.project .container::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 46px;
+  right: 10px;
+  z-index: 1;
+  border: 10px solid;
+  border-color: transparent transparent transparent var(--yellow);
+}
+
+.project .container.right::before {
+  left: 10px;
+  border-color: transparent var(--yellow) transparent transparent;
+}
+
+.project .container .date {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    top: 48px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--yellow);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    z-index: 1;
+}
+
+.project .container.left .date {
+    right: -75px;
+}
+
+.project .container.right .date {
+    left: -75px;
+}
+
+.project .container .content {
+    padding: 30px;
+    background: #ffffff;
+    position: relative;
+    border: 1px solid #eeeeee;
+    border-right: 5px solid var(--yellow);
+    border-left: 5px solid #eeeeee;
+    border-radius: 15px 0 0 15px;
+    box-shadow: 0 0 60px rgba(0, 0, 0, .08);
+}
+
+.project .container.right .content {
+    border-right: 5px solid #eeeeee;
+    border-left: 5px solid var(--yellow);
+    border-radius: 0 15px 15px 0;
+}
+
+.project .container .content h2 {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+    font-weight:bold;
+    color: #333;
+    text-transform:uppercase;
+}
+
+.project .container .content p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 22px;
+    color: #454545;
+}
+
+@media (max-width: 767.98px) {
+    .timeline::after {
+        left: 90px;
+    }
+
+    .project .container {
+        width: 100%;
+        padding-left: 120px;
+        padding-right: 30px;
+    }
+    
+    .project .container.right {
+        left: 0%;
+    }
+
+    .project .container.left::after, 
+    .project .container.right::after {
+        left: 82px;
+    }
+    
+    .project .container.left::before,
+    .project .container.right::before {
+        left: 100px;
+        border-color: transparent var(--yellow) transparent transparent;
+    }
+    
+    .project .container.left .date,
+    .project .container.right .date {
+        right: auto;
+        left: 15px;
+    }
+    
+    .project .container.left .content,
+    .project .container.right .content {
+        border-right: 5px solid #eeeeee;
+        border-left: 5px solid var(--yellow);
+        border-radius: 0 15px 15px 0;
+    }
+}
+
+.education .box-container{
+    align-items: center;
+    justify-content: space-between;
+
+    padding-left: 3rem;
+    padding-top: 40px;
+}
+
+.education .box-container .box{
+    width:60rem;
+    margin:4rem 1rem;
+    padding-left: 4rem;
+    border-left: .2rem solid #fff;
+    position: relative;
+}
+
+.education .box-container .box span{
+    font-size: 1.3rem;
+    background:#222;
+    color:#fff;
+    border-radius: 5rem;
+    padding:.5rem 2.5rem;
+}
+
+.education .box-container .box h3{
+    font-size: 2rem;
+    color:#fff;
+    padding-top: 1.5rem;
+}
+
+.education .box-container .box p{
+    font-size: 1.4rem;
+    color:#eee;
+    padding: 1rem 0;
+}
+
+.education .box-container .box i{
+    position: absolute;
+    top:-1.5rem; left:-2.5rem;
+    height:5rem;
+    width: 5rem;
+    border-radius: 50%;
+    line-height: 5rem;
+    text-align: center;
+    font-size: 2rem;
+    color:#fff;
+    background:var(--yellow);
+}
+
+
+.html {width: 90%; background-color:olive ;}
+.css {width: 80%; background-color: #3671a1;}
+.js {width: 35%; background-color: #a34841;}
+.php {width: 20%; background-color: #808080;}
+.c {width: 80%; background-color: palegreen; }
+.plus {width: 70%; background-color:goldenrod}
+.sql {width: 60%; background-color: sienna}
+.skills {
+  text-align: right;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+}
+.Skills p{
+    color: #fff;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 15px; 
+}
+.Awards .grid { 
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+    grid-gap: 40px;
+    align-items: stretch;
+    }
+.Awards .grid img {
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 2px 0px  rgba(0,0,0,0.3);
+    max-width: 100%;
+  }
+.Awards .card {
+    padding: 40px;
+    width: 500px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+  }
+  .Awards .card .card-title{
+      color: white;
+      margin: 20px;
+      font-size: 15px;
+  }
+  @media (max-width:767.98px) {
+    .Awards .card{
+        width: 330px;
+
+    }
+}
+.Awards .grid button{
+    margin-left: 80%;
+    cursor: pointer;
+    width: 130px;
+    height: 40px;
+    border-radius: 20px;
+    background-color:rgb(255, 255, 255);
+}
+.Awards .grid button span{
+    color: rgb(0, 0, 0);
+}
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 28px;
+    outline: none;
+    background-color: var(--yellow);
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50px;
+  }
+ 
+  #myBtn:hover {
+    background-color: #555;
+  }
+
+/* media queries  */
+
+@media (max-width:1200px){
+
+    html{
+        font-size: 55%;
+    }
+
+    .home{
+        padding:1rem 4rem;
+    }
+
+}
+
+@media (max-width:991px){
+
+   header{
+       left:-120%;
+   }
+
+   #menu{
+       display: block;
+   }
+
+   header.toggle{
+    left:0%;
+   }
+
+   body{
+       padding:0;
+   }
+
+}
+
+@media (max-width:768px){
+
+    html{
+        font-size: 50%;
+    }
+    .Awards .grid button{
+        margin-left: 15%;
+
+    }
+ }
+
+@media (max-width:400px){
+
+    header{
+        width: 100vw;
+    }
+
+    .heading{
+        margin:0 3rem;
+    }
+
+    .project .row .counter .box{
+        width: 100%;
+    }
+ 
+    .education .box-container .box{
+        width:100%;
+    }
+
+    .Skills .box-container .box{
+        width:100%;
+    }
+
+    .Awards .row form{
+        margin:3rem 0;
+    }
+
+ }
